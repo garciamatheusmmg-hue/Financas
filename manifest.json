@@ -2,7 +2,7 @@
   "name": "Finanças Pessoais",
   "short_name": "Finanças",
   "description": "Dashboard financeiro pessoal",
-  "start_url": "/",
+  "start_url": "/financas/index.html",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#0a0a0f",
