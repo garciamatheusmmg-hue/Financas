@@ -320,7 +320,8 @@ function render(){
   const rows=gm(curM,curY),projs=gm(curM,curY,true);
   const ent=rows.filter(r=>r.tipo==='Entrada'),sai=rows.filter(r=>r.tipo==='Saída');
   const tIn=ent.reduce((s,r)=>s+r.valor,0),tOut=sai.reduce((s,r)=>s+r.valor,0);
-  const saldo=tIn-tOut,tOutP=tOut+projs.reduce((s,r)=>s+r.valor,0);
+  const tOutP=tOut+projs.reduce((s,r)=>s+r.valor,0);
+  const saldo=tIn-tOutP;
   const tot=tIn+tOut,pIn=tot>0?Math.round(tIn/tot*100):0,pOut=tot>0?Math.round(tOut/tot*100):0;
   const sc=saldo>=0?'bl':'rd';
 
